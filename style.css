@@ -1,0 +1,328 @@
+/* Global reset basique : */
+/* Pour garantir une apparence homogène entre différents navigateurs */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Josefin Sans";
+    color :#2e3192;
+
+}
+body{
+    scroll-behavior: smooth;
+}
+.titre{
+    font-size: 2.5rem;
+}
+#navbar{
+    height:4rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    background-color: #ffce1f;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    z-index: 50;
+    position: relative;
+    a{
+        transform:translate(0,0.25rem); /* remonter un peux les elements de la navbar pour plus les centrer*/
+    }
+}
+a{
+    font-weight: bold;
+    text-decoration: none;
+    
+}
+.logo{
+    width:3.5rem;
+    margin-top: 0.4rem;
+    margin-left: 0.5rem;
+}
+
+.navbar-liens{
+    display:flex;
+    margin:auto;
+    gap:8rem;
+}
+
+header{
+    transform: translateY(-5rem);
+    height:60rem;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    img{
+        display: block;
+        max-width: 4%;
+        z-index: 1;
+        position: relative;
+        margin-top: 20%;
+    }
+}
+header h1{
+    z-index: 1;
+    position: relative;
+    text-shadow: #FFFFFF 0.1rem 0rem 0.5rem,#FFFFFF -0.1rem 0rem 0.5rem,#FFFFFF 0rem 0.1rem 0.5rem,#FFFFFF 0rem -0.1rem 0.5rem;
+    /* faire un contour blanc autour du titre pour le rendre plus lisible sur le code du fond*/
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25%;
+}
+header::before{ /*  le before pour creer un element premettent de rajouter du blur sur l'ecran sans que le titre soit blur aussi*/
+    position:absolute;
+    inset: 0;
+    z-index: 0;
+    content: '';
+    background-image: url(img/test.gif);
+    background-position: center;
+    background-size: cover;
+    filter: blur(2px);
+    mask-image: linear-gradient(to bottom,black 90%,transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom,black 90%,transparent 100%);
+}
+.type{
+    height:60rem;
+    display:flex;
+    flex-direction: column;
+    align-content: space-between;
+    align-items: center;
+    
+    h2{
+        padding-top: 4rem;
+    }
+}
+.center{
+    margin: auto;
+}
+/*  les cartes  
+    //////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+
+
+.card-track{
+    display:flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.card{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: end;
+    padding-bottom: 3rem;
+    height: 30rem;
+    border: solid 0.5rem #2e3192;
+    border-radius: 0.2rem;
+    box-shadow: inset 0rem 0rem 0rem 0.5rem #ffce1f;
+    width:25rem;
+    font-size: 2rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#game-card{
+    background-image: url(img/gaming.webp);
+
+}
+
+#music-card{
+    background-image: url(img/music.webp);
+
+}
+
+#web-card{
+    background-color: #E6C1B4;
+    background-image: url(img/site.webp);
+    background-size: contain;
+}
+
+#app-card{
+    background-image: url(img/apps.webp);
+}
+
+#draw-card{
+    background-image: url(img/draw.jpg);
+}
+
+#design-card{
+    background-image: url(img/design.webp);
+}
+
+#animation-card{
+    background-image: url(img/animate.webp);
+    background-size: 110%;
+    background-color: #FFFFFF;
+}
+
+#troisd-card{
+    background-image: url(img/3d.png);
+}
+
+.card-track{
+    will-change: transform;
+    margin-top: 5rem;
+}
+.card-section{
+    overflow-x: hidden;
+    overflow-y: visible;
+    width: stretch;
+    height: 40rem;
+}
+
+/*
+    //////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+#games{
+    height: 60rem;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns: 20rem 20rem;
+    grid-template-rows: 20rem 20rem;
+    grid-column: 2;
+    grid-row: 2;
+    img{
+        width: 18rem;
+    }
+}
+.desc{
+    font-size: 1rem;
+    text-align: center;
+    width: 20rem;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap:1.5rem;
+    width: 50rem;
+    align-items: center;
+    margin: auto;
+    font-size: 3rem;
+    height: 30rem;
+    align-content: center;
+    input{
+        width: 15rem;
+        height: 2rem;
+        font-size: 1rem;
+    }
+    textarea{
+        width: 15rem;
+        height: 5rem;
+        font-size: 1rem;
+    }
+    h4{
+        margin-bottom: 2rem;
+    }
+}
+.margin-title{
+    margin-bottom: 6rem;
+}
+footer{
+    background-color: #2e3192;
+    p{color: #ffce1f;}
+    a{color: #ffce1f;}
+    padding-top: 2rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    padding-bottom: 2rem;
+    display:flex;
+    gap: 10rem;
+    justify-content: space-around;
+}
+.list{
+    padding-top: 1rem;
+    display: flex;
+    gap:3rem;
+}
+
+.hidden{
+    display: None; /* utilisé pour faire des disparaitres des elements pour le js*/
+}
+.error{
+    font-size: 1rem;
+    font-weight: bold;
+    color: red;
+}
+
+
+
+.yellow{
+    color:#ffce1f;
+}
+
+.blueContour{
+    text-shadow: #2e3192 0.1rem 0rem 0rem,#2e3192 -0.1rem 0rem 0rem,#2e3192 0rem 0.1rem 0rem,#2e3192 0rem -0.1rem 0rem;
+}
+
+.yellowContour{
+    text-shadow: #ffce1f 0.1rem 0rem 0rem,#ffce1f -0.1rem 0rem 0rem,#ffce1f 0rem 0.1rem 0rem,#ffce1f 0rem -0.1rem 0rem;
+}
+
+.largeGrid{
+    display: grid;
+    grid-template-columns: repeat(3,20rem) ;
+    grid-template-rows: repeat(2,20rem);
+    gap: 2rem;
+    img{
+        width: 18rem;
+    }
+}
+
+.deuXun{
+
+    grid-column: span 2;
+    font-size: 1.25rem;
+    p{
+        margin-left: 1rem;
+    }
+}
+
+.unXdeu{
+
+    grid-row: span 2;
+}
+
+.titreSection{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: end;
+    h3{
+        font-size: 10rem;
+        transform:translate(0,2rem);
+    }
+
+}
+
+.backDeezer{
+    background-image: url(img/deezer.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 180%;
+}
+.backSite{
+    background-image: url(img/htmlLogo.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+main{
+    background-image: url(img/fontgame.webp);
+    background-position: center;
+}
+
+form{
+    margin-bottom: 5rem;
+}
